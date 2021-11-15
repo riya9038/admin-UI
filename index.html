@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ADMIN PANEL</title>
+    <script src="https://kit.fontawesome.com/00d3e89dba.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="admin.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <!-- header -->
+    <header>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2636/2636258.png" alt="admin">
+            <h3 style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 1.2rem; font-weight: 700;" class="blink_me">ADMIN PANEL</h3>
+        </div>
+
+    </header>
+    <!-- header -->
+
+    <!-- <main> -->
+    <main>
+        <div id="container">
+            <div id="search">
+                <input type="text" name="search-bar" id="searchUser" placeholder="Search by name, email or role")>
+                <img src="https://cdn-icons-png.flaticon.com/512/2282/2282175.png" style="cursor: pointer;" onclick="searchUserButton()">
+            </div>
+
+            <!-- heading -->
+            <div id="admin-list">
+                <div id="admin-title-list">
+                    <input id="check" type="checkbox" value="checked" onclick="deleteChecked()">
+                    <span> Name </span>
+                    <span> Email </span>
+                    <span> Role </span>
+                    <span> Action </span>
+                </div>
+                <!-- heading -->
+
+                <!-- list -->
+                <div id="list">
+                    <ul style="padding:0px;">
+                        <li id="admin-user-list"> 
+                            <!-- <div class="admin-user">
+                                    <div class="userInput"><input class="check" type="checkbox" value="${users[i].id}"></div>
+                                    <div class="userInput" id="${users[i].id}"><input type="text" id="${users[i].id}" value="${users[i].name}" readonly></div>
+                                    <div class="userInput" id="${users[i].id}"><input type="email" id="${users[i].id}" value="${users[i].email}" readonly></div>
+                                    <div class="userInput" id="${users[i].id}"><input type="text" id="${users[i].id}" value="${users[i].role}" readonly></div>
+                                    <div id="action" class="user"> 
+                                        <div id="${users[i].id}" class="edit"><i class="far fa-edit"></i></div>
+                                        <div id="${users[i].id}" class="del"><i class="fas fa-trash-alt"></i></div>
+                                    </div>
+                            </div> -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- list -->
+
+                <!-- pagination -->
+                <div id="pagination">
+                    <div class="deleteAll">
+                        <input type="submit" id="submit" value="Delete Selected" onclick="deleteAllButton()"></div>
+                    <div class="page-buttons">
+                        <span class="previous"><a href='#'><i class="fas fa-angle-double-left"></i></a></span>
+                        <span class="left"><i class="fas fa-angle-left"></i></span>
+                        <span class="1">1</span>
+                        <span class="2">2</span>
+                        <span class="3">3</span>
+                        <span class="4">4</span>
+                        <span class="5">5</span>
+                        <span class="right"><i class="fas fa-angle-right"></i></span>
+                        <span class="next"><i class="fas fa-angle-double-right"></i></span>
+                    </div>
+                </div>
+                <!-- pagination -->
+
+            </div>
+            
+        </div>
+    </main>
+    <!-- main -->
+
+    <script src="admin.js"></script>
+  </body>
+</html>
